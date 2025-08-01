@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Smart To-Do List</h1>
+      <div id="digital-clock" class="digital-clock">Loading clock…</div>
+      <button id="theme-toggle" class="theme-toggle" title="Toggle light/dark mode">🌙</button>
+    </header>
+
+    <section class="task-input-section">
+      <form id="task-form" class="task-form" autocomplete="off">
+        <input
+          type="text"
+          id="task-input"
+          class="task-input"
+          placeholder="Enter a new task..."
+          maxlength="200"
+          required
+        />
+        <select id="category-select" class="category-select" aria-label="Select task category">
+          <option value="None">None</option>
+          <option value="Coding">Coding</option>
+          <option value="Diet">Diet</option>
+          <option value="Work">Work</option>
+          <option value="Personal">Personal</option>
+        </select>
+        <button type="submit" class="add-btn">
+          <span class="btn-text">Add Task</span>
+          <span class="btn-icon">+</span>
+        </button>
+      </form>
+    </section>
+
+    <section class="task-stats" aria-live="polite" aria-atomic="true">
+      <div class="stats-item">
+        <span id="total-tasks">0</span>
+        <span>Total Tasks</span>
+      </div>
+      <div class="stats-item">
+        <span id="completed-tasks">0</span>
+        <span>Completed</span>
+      </div>
+      <div class="stats-item">
+        <span id="pending-tasks">0</span>
+        <span>Pending</span>
+      </div>
+    </section>
+
+    <section class="task-controls">
+      <button id="clear-completed" class="control-btn secondary">Clear Completed</button>
+      <button id="clear-all" class="control-btn danger">Clear All Tasks</button>
+      <select id="category-filter" class="category-filter" aria-label="Filter tasks by category">
+        <option value="All">All Categories</option>
+        <option value="Coding">Coding</option>
+        <option value="Diet">Diet</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+      </select>
+    </section>
+
+    <section class="tasks-section">
+      <ul id="tasks-list" class="tasks-list" aria-live="polite" aria-atomic="true"></ul>
+      <div id="empty-state" class="empty-state" role="alert" aria-live="assertive">
+        <p>🎯 No tasks yet! Add your first task above.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <h3><strong>Created By Ashesh ❤️</strong></h3>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
