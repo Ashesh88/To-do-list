@@ -1,5 +1,5 @@
 
-👉 [Live Demo](https://ashesh88.github.io/to-do-list/)  
+👉 [Live Demo](https://ashesh88.github.io/To-do-list/)  
 
 
 # 🧠 Smart To-Do List
